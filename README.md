@@ -1,0 +1,2 @@
+# FRIDA_Android_Print_stack
+美化frida打印安卓java调用栈，显示签名返回值等等，并加上颜色，以此快速定位调用方法
