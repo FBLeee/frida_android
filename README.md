@@ -25,14 +25,14 @@
 ****
 ## 4.frida反调试
 
-  ### 4.1 https://github.com/thinkerMid
+### 4.1 https://github.com/thinkerMid
     ① bilibiliAntiantifrida.js   
     ② anti_frida_root.js （bangbang）
 
 ## 5.通杀常用对称加密算法
 	dec.js
 	
-	### 5.1 效果图
+### 效果
  ![image](https://github.com/FBLeee/frida_android/assets/50468890/68f4bc6c-7466-4477-83c6-1bfaa9417a8d)
 
 	
