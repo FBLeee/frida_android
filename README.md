@@ -30,5 +30,9 @@
     ② anti_frida_root.js （bangbang）
 
 ## 5.通杀常用对称加密算法
+	dec.js
+	
+	### 5.1 效果图
+	
 
 
