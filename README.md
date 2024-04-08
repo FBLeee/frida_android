@@ -29,5 +29,6 @@
     ① bilibiliAntiantifrida.js   
     ② anti_frida_root.js （bangbang）
 
+## 5.通杀常用对称加密算法
 
 
