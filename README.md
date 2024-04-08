@@ -33,6 +33,8 @@
 	dec.js
 	
 	### 5.1 效果图
+ ![image](https://github.com/FBLeee/frida_android/assets/50468890/68f4bc6c-7466-4477-83c6-1bfaa9417a8d)
+
 	
 
 
