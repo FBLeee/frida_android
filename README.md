@@ -35,6 +35,10 @@
 ### 效果
  ![image](https://github.com/FBLeee/frida_android/assets/50468890/68f4bc6c-7466-4477-83c6-1bfaa9417a8d)
 
+ ## 6.sendto和recvfrom
+ 	hook_recvfrom.js
+  	hook_sendto.js
+
 	
 
 
