@@ -35,12 +35,12 @@ function numToIp(number) {
 
 
 
-function hook_sendto() {
+function hook_recvfrom() {
     Interceptor.attach(Module.findExportByName('libc.so', 'recvfrom'), {
         onEnter: function (args) {
             this.sockfd = args[0];
             this.buf = args[1];
-            this.buf_len = args[2];
+            this.buf_len = args[2];  //接收的最大长度
             this.flags = args[3];
             this.src_addr = args[4];
             this.addrlen = args[5];
@@ -53,7 +53,7 @@ function hook_sendto() {
             console.log('----------recvfrom start------------------');
             console.log('recvfrom fd=' + this.sockfd);
             console.log('recvfrom buf len=' + retval);
-            var n = retval.toUInt32();
+            var n = retval.toUInt32();  //接收的实际长度
             console.log('recvfrom buf=' + hexdump(this.buf, { length: n }));
             console.log('recvfrom flags=' + this.flags);
             //console.log('sendto dest_addr'+print_arg(args[4]));
@@ -102,7 +102,7 @@ function hook_native() {
 function main() {
     // hook_java();
     // hook_native();
-    hook_sendto();
+    hook_recvfrom();
 }
 
 setImmediate(main);
