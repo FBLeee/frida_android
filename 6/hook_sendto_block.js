@@ -14,7 +14,7 @@ function addr_in_so(addr){
 
 
 
-
+//打印so函数对应在java层的调用栈
 var TAG = "ffcmb: ";
 console.log(TAG + 'Android cmb 6');
 
