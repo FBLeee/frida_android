@@ -1,3 +1,20 @@
+//自实现打印调用栈
+function addr_in_so(addr){
+    var process_Obj_Module_Arr = Process.enumerateModules();
+    for(var i = 0; i < process_Obj_Module_Arr.length; i++) {
+        if(addr>process_Obj_Module_Arr[i].base && addr<process_Obj_Module_Arr[i].base.add(process_Obj_Module_Arr[i].size)){
+            console.log(addr.toString(16),"is in",process_Obj_Module_Arr[i].name,"offset: 0x"+(addr-process_Obj_Module_Arr[i].base).toString(16));
+        }
+    }
+}
+
+
+
+
+
+
+
+
 var TAG = "ffcmb: ";
 console.log(TAG + 'Android cmb 6');
 
@@ -73,6 +90,10 @@ function hook_native() {
     //      this.args2 = args[2];
     //      console.log("setValue called from:" +Thread.backtrace(this.context, Backtracer.ACCURATE).map(DebugSymbol.fromAddress).join('\n') + '\n');
     //      console.log("this.args0: ", this.args0);
+
+            // Thread.backtrace返回当前线程的回溯（backtrace）。回溯是一个包含了当前函数调用链的数组，每个元素都是一个函数的地址。
+			// 将这个回溯数组传递给 map 函数，以便对其中的每个地址执行addr_in_so操作
+            //Thread.backtrace(this.context, Backtracer.FUZZY).map(addr_in_so);
     //  },
     //  onLeave: function (retval) {
     //  }
