@@ -38,6 +38,7 @@
  ## 6.sendto和recvfrom
  	hook_recvfrom.js
   	hook_sendto.js
+   	hook_sendto_block.js   //防止打印日志错乱
 
 	
 
