@@ -1,4 +1,4 @@
-//自实现打印调用栈
+//自实现打印so调用栈，在标准调用栈打印崩溃时使用
 function addr_in_so(addr){
     var process_Obj_Module_Arr = Process.enumerateModules();
     for(var i = 0; i < process_Obj_Module_Arr.length; i++) {
@@ -7,11 +7,6 @@ function addr_in_so(addr){
         }
     }
 }
-
-
-
-
-
 
 
 //打印so函数对应在java层的调用栈
